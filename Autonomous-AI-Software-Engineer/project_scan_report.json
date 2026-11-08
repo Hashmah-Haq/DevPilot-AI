@@ -1,0 +1,227 @@
+{
+    "project": "demo_project",
+    "files_scanned": 2,
+    "total_findings": 7,
+    "files": {
+        "main.py": {
+            "syntax": {
+                "status": "success",
+                "issues": []
+            },
+            "ruff": [
+                {
+                    "cell": null,
+                    "code": "I001",
+                    "end_location": {
+                        "column": 10,
+                        "row": 1
+                    },
+                    "filename": "/tmp/tmpxvcqhywg/sample.py",
+                    "fix": {
+                        "applicability": "safe",
+                        "edits": [
+                            {
+                                "content": "import os\n\n",
+                                "end_location": {
+                                    "column": 1,
+                                    "row": 2
+                                },
+                                "location": {
+                                    "column": 1,
+                                    "row": 1
+                                }
+                            }
+                        ],
+                        "message": "Organize imports"
+                    },
+                    "location": {
+                        "column": 1,
+                        "row": 1
+                    },
+                    "message": "Import block is un-sorted or un-formatted",
+                    "name": "unsorted-imports",
+                    "noqa_row": 1,
+                    "severity": "error",
+                    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+                },
+                {
+                    "cell": null,
+                    "code": "F401",
+                    "end_location": {
+                        "column": 10,
+                        "row": 1
+                    },
+                    "filename": "/tmp/tmpxvcqhywg/sample.py",
+                    "fix": {
+                        "applicability": "safe",
+                        "edits": [
+                            {
+                                "content": "",
+                                "end_location": {
+                                    "column": 1,
+                                    "row": 2
+                                },
+                                "location": {
+                                    "column": 1,
+                                    "row": 1
+                                }
+                            }
+                        ],
+                        "message": "Remove unused import: `os`"
+                    },
+                    "location": {
+                        "column": 8,
+                        "row": 1
+                    },
+                    "message": "`os` imported but unused",
+                    "name": "unused-import",
+                    "noqa_row": 1,
+                    "severity": "error",
+                    "url": "https://docs.astral.sh/ruff/rules/unused-import"
+                },
+                {
+                    "cell": null,
+                    "code": "F821",
+                    "end_location": {
+                        "column": 25,
+                        "row": 2
+                    },
+                    "filename": "/tmp/tmpxvcqhywg/sample.py",
+                    "fix": null,
+                    "location": {
+                        "column": 7,
+                        "row": 2
+                    },
+                    "message": "Undefined name `undefined_variable`",
+                    "name": "undefined-name",
+                    "noqa_row": 2,
+                    "severity": "error",
+                    "url": "https://docs.astral.sh/ruff/rules/undefined-name"
+                }
+            ],
+            "security": [],
+            "total_findings": 3
+        },
+        "utils.py": {
+            "syntax": {
+                "status": "success",
+                "issues": []
+            },
+            "ruff": [
+                {
+                    "cell": null,
+                    "code": "I001",
+                    "end_location": {
+                        "column": 18,
+                        "row": 1
+                    },
+                    "filename": "/tmp/tmpjyqce23p/sample.py",
+                    "fix": {
+                        "applicability": "safe",
+                        "edits": [
+                            {
+                                "content": "import subprocess\n\n\n",
+                                "end_location": {
+                                    "column": 1,
+                                    "row": 2
+                                },
+                                "location": {
+                                    "column": 1,
+                                    "row": 1
+                                }
+                            }
+                        ],
+                        "message": "Organize imports"
+                    },
+                    "location": {
+                        "column": 1,
+                        "row": 1
+                    },
+                    "message": "Import block is un-sorted or un-formatted",
+                    "name": "unsorted-imports",
+                    "noqa_row": 1,
+                    "severity": "error",
+                    "url": "https://docs.astral.sh/ruff/rules/unsorted-imports"
+                },
+                {
+                    "cell": null,
+                    "code": "PLW1510",
+                    "end_location": {
+                        "column": 19,
+                        "row": 3
+                    },
+                    "filename": "/tmp/tmpjyqce23p/sample.py",
+                    "fix": {
+                        "applicability": "displayonly",
+                        "edits": [
+                            {
+                                "content": "check=False, ",
+                                "end_location": {
+                                    "column": 25,
+                                    "row": 3
+                                },
+                                "location": {
+                                    "column": 25,
+                                    "row": 3
+                                }
+                            }
+                        ],
+                        "message": "Add explicit `check=False`"
+                    },
+                    "location": {
+                        "column": 5,
+                        "row": 3
+                    },
+                    "message": "`subprocess.run` without explicit `check` argument",
+                    "name": "subprocess-run-without-check",
+                    "noqa_row": 3,
+                    "severity": "error",
+                    "url": "https://docs.astral.sh/ruff/rules/subprocess-run-without-check"
+                }
+            ],
+            "security": [
+                {
+                    "code": "1 import subprocess\n2 def run_command(cmd):\n3     subprocess.run(cmd, shell=True)\n",
+                    "col_offset": 0,
+                    "end_col_offset": 17,
+                    "filename": "/tmp/tmpcb00ytp4/sample.py",
+                    "issue_confidence": "HIGH",
+                    "issue_cwe": {
+                        "id": 78,
+                        "link": "https://cwe.mitre.org/data/definitions/78.html"
+                    },
+                    "issue_severity": "LOW",
+                    "issue_text": "Consider possible security implications associated with the subprocess module.",
+                    "line_number": 1,
+                    "line_range": [
+                        1
+                    ],
+                    "more_info": "https://bandit.readthedocs.io/en/1.9.4/blacklists/blacklist_imports.html#b404-import-subprocess",
+                    "test_id": "B404",
+                    "test_name": "blacklist"
+                },
+                {
+                    "code": "2 def run_command(cmd):\n3     subprocess.run(cmd, shell=True)\n",
+                    "col_offset": 4,
+                    "end_col_offset": 35,
+                    "filename": "/tmp/tmpcb00ytp4/sample.py",
+                    "issue_confidence": "HIGH",
+                    "issue_cwe": {
+                        "id": 78,
+                        "link": "https://cwe.mitre.org/data/definitions/78.html"
+                    },
+                    "issue_severity": "HIGH",
+                    "issue_text": "subprocess call with shell=True identified, security issue.",
+                    "line_number": 3,
+                    "line_range": [
+                        3
+                    ],
+                    "more_info": "https://bandit.readthedocs.io/en/1.9.4/plugins/b602_subprocess_popen_with_shell_equals_true.html",
+                    "test_id": "B602",
+                    "test_name": "subprocess_popen_with_shell_equals_true"
+                }
+            ],
+            "total_findings": 4
+        }
+    }
+}

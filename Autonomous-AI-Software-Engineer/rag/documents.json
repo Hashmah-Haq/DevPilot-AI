@@ -1,0 +1,10 @@
+[
+    "NameError: A variable is used before it is defined.",
+    "SyntaxError: Python code contains invalid syntax.",
+    "F401: Ruff detects unused imports in Python code.",
+    "F821: Ruff detects undefined names in Python code.",
+    "B602: Bandit detects subprocess calls using shell=True.",
+    "pytest: A framework for automated Python testing.",
+    "Command injection: Untrusted input can cause unsafe shell commands.",
+    "Code optimization: Improve performance without changing intended behavior."
+]

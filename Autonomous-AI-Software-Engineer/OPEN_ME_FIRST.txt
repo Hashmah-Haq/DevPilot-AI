@@ -1,0 +1,19 @@
+DEVPILOT AI - NO COLAB OR CLOUDFLARE REQUIRED
+
+WINDOWS:
+1. Extract this ZIP (right-click -> Extract All).
+2. Double-click START_DASHBOARD.bat.
+3. Your browser opens automatically with the REAL frontend and backend.
+
+FIRST RUN: Python 3.10+ must be installed and internet access is needed to install dependencies. Installation may take several minutes. Later launches reuse the environment. Keep the black terminal window open while recording your demo.
+
+IF PYTHON IS MISSING: Install from https://www.python.org/downloads/ and check 'Add Python to PATH'. Then double-click again.
+
+LINUX/MAC: Run bash START_DASHBOARD.sh (Python 3 and venv required).
+
+FEATURES:
+- Code Workspace: real AST + Ruff + Bandit checks, save/download JSON reports.
+- AI Agents: optional Qwen downloads and dependencies; install with .venv\\Scripts\\python.exe -m pip install -r requirements-ai.txt on Windows.
+- RAG: optional model downloads; see README.
+
+This is a LOCAL app. It does not require a public URL or tunnel. The browser opens on 127.0.0.1. Do not upload secrets or private code to publicly shared demos.

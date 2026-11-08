@@ -1,0 +1,5 @@
+streamlit>=1.36,<2
+ruff>=0.6
+bandit>=1.7
+pytest>=8
+# Optional AI + RAG features (install with: pip install -r requirements-ai.txt)

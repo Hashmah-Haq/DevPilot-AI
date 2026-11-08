@@ -1,0 +1,6 @@
+-r requirements.txt
+transformers>=4.44,<5
+torch>=2.2
+sentence-transformers>=3,<6
+faiss-cpu>=1.8
+langgraph>=0.2
